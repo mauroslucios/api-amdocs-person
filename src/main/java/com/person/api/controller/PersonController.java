@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.person.api.repository.PersonRepository;
+import com.person.api.service.PersonService;
 
 import io.swagger.annotations.Api;
 
@@ -15,6 +15,12 @@ import io.swagger.annotations.Api;
 @CrossOrigin(origins="*")
 public class PersonController {
 
+	
+	private PersonService personService;
+	
 	@Autowired
-	PersonRepository personRepository;
+	public PersonController(PersonService personService) {
+	
+	}
+	
 }
