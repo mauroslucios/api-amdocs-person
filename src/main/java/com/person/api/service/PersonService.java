@@ -24,7 +24,8 @@ public class PersonService {
 		return PersonDTO.converter(persons);
 	}
 
-	public Person insertPerson(Person person) {
+	public Person createPerson(Person person) {
 		return personRepository.save(person);
+		
 	}
 }

@@ -33,20 +33,17 @@ public class PersonController {
 		this.personService = personService;
 	}
 	
-	@GetMapping("/person")
+	@GetMapping("/persons")
 	@ApiOperation(value="Return a list of people")
 	public List<PersonDTO> listPerson(){
 		return personService.listPerson();
 	}
 	
 	@ResponseStatus(HttpStatus.CREATED)
-    @PostMapping(value="/person")
+    @PostMapping("/persons")
     @ApiOperation(value="Create a person")
-	public Person insertPerson(@RequestBody Person person) {
-		return personService.insertPerson(person);
+	public Person createPerson(@RequestBody Person person) {
+		return personService.createPerson(person);
 	}
-	
-	
-	
-	
+		
 }

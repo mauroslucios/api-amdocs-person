@@ -11,12 +11,14 @@ import com.person.api.entities.Person;
 import com.person.api.entities.Phone;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class PersonDTO {
 	
 	public PersonDTO(Person person) {
@@ -37,7 +39,6 @@ public class PersonDTO {
 	
 	@NotEmpty
 	private String cpf;
-	
 	
 	private String birthDate;
 	
