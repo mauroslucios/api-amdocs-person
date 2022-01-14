@@ -28,6 +28,7 @@ public class PhoneDTO {
 		this.number = phone.getNumber();
 	}
 	
+	
 	@Enumerated(EnumType.STRING)
 	private PhoneType type;
 	

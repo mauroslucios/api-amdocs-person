@@ -22,6 +22,7 @@ import lombok.NoArgsConstructor;
 public class PersonDTO {
 	
 	public PersonDTO(Person person) {
+		this.id = person.getId();
 		this.firstName = person.getFirstName();
 		this.lastName = person.getLastName();
 		this.cpf = person.getCpf();
@@ -29,6 +30,8 @@ public class PersonDTO {
 		this.phones = person.getPhones();
 	}
 
+	private Long id;
+	
 	@NotEmpty
 	@Size(min = 2, max =100)
 	private String firstName;
