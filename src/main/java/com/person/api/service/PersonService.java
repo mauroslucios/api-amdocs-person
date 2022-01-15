@@ -16,11 +16,6 @@ public class PersonService {
 
 	private PersonRepository personRepository;
 	
-//	@Autowired
-//	public PersonService(PersonRepository personRepository) {
-//		this.personRepository = personRepository;
-//	}
-
 	public List<PersonDTO> listPerson() {
 		List<Person> persons = personRepository.findAll();
 		return  PersonDTO.converter(persons);
@@ -38,4 +33,9 @@ public class PersonService {
 	public void deletePerson(Long id) {
 		personRepository.deleteById(id);
 	}
+
+	public Person updatePerson(Person person) {
+		return personRepository.save(person);
+	}
+	
 }

@@ -31,7 +31,7 @@ public class Person{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+	@Column(nullable = false)
     private String firstName;
 
     @Column(nullable = false)
@@ -46,6 +46,5 @@ public class Person{
 
     @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private List<Phone> phones;
-    
-    
+
 }
