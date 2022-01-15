@@ -1,5 +1,6 @@
 package com.person.api.dto;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -43,7 +44,7 @@ public class PersonDTO {
 	@NotEmpty
 	private String cpf;
 	
-	private String birthDate;
+	private LocalDate birthDate;
 	
 	@Valid
 	@NotEmpty
