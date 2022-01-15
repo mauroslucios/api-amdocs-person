@@ -37,7 +37,6 @@ public class Person{
     @Column(nullable = false)
     private String lastName;
 
-    //@CPF
     @Column(nullable = false, unique = true)
     private String cpf;
 
